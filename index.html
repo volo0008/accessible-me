@@ -12,33 +12,41 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body>
+<body itemscope itemtype="https://schema.org/WebPage">
+  <a class="skip-link-top" href="#main-content">Skip to main content</a> <!--This skip link will stick to top-->
   <div class="container">
-    <div class="site-header">
-      <h1>Jam Box Studios</h1>
-      <div class="main-nav">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Products</a></li>
-          <li><a href="#">Reservation</a></li>
-          <li><a href="#">Studio</a></li>
-        </ul>
+
+    <header class="site-header" role="banner">
+
+      <div class="header-content">
+        <img src="https://placekitten.com/200/300" class="banner" alt="an image of a kitten"> <!--I made a picture smaller and placed it as a logo-->
+      <h1 role="heading" aria-level="1">Jam Box Studios</h1> 
       </div>
-      <img src="https://placekitten.com/1200/900" class="banner">
-    </div>
-    <div class="main-content">
-      <h1>Welcome to Jam Box</h1>
+
+      <nav class="main-nav" id="main-nav" role="navigation">
+        <ul>
+          <li><a href="#" aria-details="go-to-home-page">Home</a></li>
+          <li><a href="#" aria-details="explore-products-page">Products</a></li>
+          <li><a href="#" aria-details="make-reservation-page">Reservation</a></li>
+          <li><a href="#" aria-details="read-studio-page">Studio</a></li>
+        </ul>
+      </nav>
+
+    </header>
+
+    <main class="main-content" id="main-content" role="main">
+      <h2 role="heading" aria-level="2">Welcome to Jam Box</h2>
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus laboriosam praesentium nostrum ipsa eveniet, officia deserunt cumque eius esse enim, ipsam accusantium autem nihil quaerat sequi perferendis optio quia veritatis.</p>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam perferendis expedita sed itaque odit ipsam omnis, eos voluptates magni fugit culpa voluptatibus, inventore eaque, eligendi voluptatum! Voluptate iusto error voluptatibus.</p>
       <div class="owner">
-        <h1>Meet the owner</h1>
+        <h2 role="heading" aria-level="2">Meet the owner</h2>
         <ul>
           <li>Name: John Doe</li>
           <li>Title: CEO</li>
           <li>Email: johnjoe@jambox.ca</li>
           <li>Phone: 613-000-0000</li>
         </ul>
-        <h1>Address</h1>
+        <h2 role="heading" aria-level="2">Address</h2>
         <p>
           Jambox Studios
           123 Guitar Road,
@@ -46,22 +54,27 @@
           B3T 0L0
         </p>
       </div>
-      <div class="contact-section">
-        <h1>Contact Us</h1>
+
+      <section class="contact-section" role="region" aria-labelledby="contact-heading">
+        <h2 id="contact-heading" role="heading" aria-level="2">Contact Us</h2>
         <form action="thanks.html">
-          <label>Full Name</label>
-          <input type="text" placeholder="Full Name">
-          <input type="text" placeholder="Email">
-          <input type="text" placeholder="Subject">
-          <b>Your Message</b>
-          <textarea></textarea>
+          <label for="fullname">Full Name</label>
+          <input type="text" id="fullname" name="fullname" placeholder="Full Name">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Email">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="Subject">
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message"></textarea>
           <button type="submit">Send</button>
         </form>
-      </div>
-    </div>
-    <div class="site-footer">
+      </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <a class="skip-link-bottom" href="#main-nav">Back to navigation</a>
       &copy; 2021 Jam Box Studios
-    </div>
+    </footer>
   </div>
 </body>
 
